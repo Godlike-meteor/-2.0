@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>神奇的计算器</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <canvas id="Mycanvas"></canvas>
+        <div class="big" id="lck">
+            <div class="top">
+                <input type="botton" class="niuniu" onclick="meiLeBa()" readonly value="x"></input>
+            </div>
+            <div class="show">
+                <input type="text" id="textarea" readonly >
+                <input type="text" id="txtScream" readonly value="0">
+            </div>
+            <div class="bottom">
+                <div class="row">
+                    <input type="botton" value="中缀转后缀" class="pow2" readonly onclick="getResultChange();"></input>
+                    <input type="botton" value="中缀计算" class="pow2 wuli" readonly onclick="getResultInfix();"></input>
+                    <input type="botton" value="后缀计算" class="pow2 wuli" readonly onclick="getResultsuffix();"></input>
+                </div>
+                <div class="row">
+                    <input type="botton" value="(" class="pow" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value=")" class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="DEL" class="pow wuli" readonly onclick="backSpace();"></input>
+                    <input type="botton" value="CE" class="pow wuli" readonly onclick="clearAll();"></input>
+                </div>
+                <div class="row">
+                    <input type="botton" value="!" class="pow" readonly onclick="Factorial();"></input>
+                    <input type="botton" value="%" class="pow wuli" readonly onclick="Percent();"></input>
+                    <input type="botton" value="," class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="+" class="pow wuli wulibaba" readonly onclick="putTheControlKey(this);"></input>
+                </div>
+                <div class="row">
+                    <input type="botton" value="7" class="pow" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="8" class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="9" class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="-" class="pow wuli wulibaba" readonly onclick="putTheControlKey(this);"></input>
+                </div>
+                <div class="row">
+                    <input type="botton" value="4" class="pow" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="5" class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="6" class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="*" class="pow wuli wulibaba" readonly onclick="putTheControlKey(this);"></input>
+                </div>
+                <div class="row">
+                    <input type="botton" value="1" class="pow" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="2" class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="3" class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="/" class="pow wuli wulibaba" readonly onclick="putTheControlKey(this);"></input>
+                </div>
+                <div class="row">
+                    <input type="botton" value="0" class="pow1" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="." class="pow wuli" readonly onclick="putTheKey(this);"></input>
+                    <input type="botton" value="=" class="pow wuli wulibaba yuanjiao" readonly onclick="getResult();"></input>
+                </div>
+            </div>
+        </div>
+        <script src="js/javascript.js"></script>
+        <script src="js/Calculator.js"></script>
+    </body>
+</html>
